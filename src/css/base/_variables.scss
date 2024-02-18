@@ -1,0 +1,18 @@
+$xs: 480px;
+$sm: 768px;
+$md: 1024px;
+$hd: 1200px;
+$lg: 1400px;
+$xlg: 1600px;
+$fhd: 1900px;
+
+:root {
+    --primary_color: #f15d26;
+    --body_bg: #fff;
+    --text_color: #313235;
+    --link_color: #337ab7;
+    --link_hover_color: #23527c;
+    --primary_font_family: 'Roboto', Arial, sans-serif;
+    --secondary_font_family: 'Gotham Pro', Arial, sans-serif;
+    --container_padding: 15px;
+}

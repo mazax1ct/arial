@@ -1,0 +1,39 @@
+.breadcrumbs {
+    font-size: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+
+    &__list {
+        @include list-reset;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    &__item {
+        align-items: center;
+        display: flex;
+        gap: 15px;
+
+        &:not(:last-child) {
+            &::after {
+                background: url("../images/icons/bread-seporator.png") no-repeat 50% 50% transparent;
+                content: '';
+                display: block;
+                height: 15px;
+                width: 9px;
+            }
+        }
+    }
+
+    &__link {
+        color: var(--text_color);
+        text-decoration: none;
+        @include hover {
+            color: var(--text_color);
+            text-decoration: underline;
+        }
+    }
+}

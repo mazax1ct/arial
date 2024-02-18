@@ -1,0 +1,46 @@
+.detail {
+    padding-top: 30px;
+    @media(min-width: $md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--container_padding);
+    }
+
+    &__text-block {
+        @media(min-width: $md) {
+            order: 2;
+        }
+        @media(max-width: $md - 0.01px) {
+            margin-bottom: var(--container_padding);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            @media(min-width: $md) {
+                text-align: left;
+            }
+        }
+    }
+
+    &__image-block {
+        @media(max-width: $md - 0.01px) {
+            margin-left: calc(0.01px - var(--container_padding));
+            margin-right: calc(0.01px - var(--container_padding));
+        }
+        @media(min-width: $md) {
+            order: 1;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
