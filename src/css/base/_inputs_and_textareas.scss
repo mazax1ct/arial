@@ -1,12 +1,8 @@
 .form-label {
-    color: var(--secondary_color_dark);
     display: block;
-    font-size: 16px;
-    line-height: 1;
-    margin-bottom: 10px;
-    @media(min-width: $fhd) {
-        font-size: 24px;
-    }
+    font-family: var(--secondary_font_family);
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .disabled {
@@ -18,24 +14,15 @@
 .input,
 .textarea {
     border-radius: 0;
-    border: 1px solid var(--secondary_color);
-    background-color: transparent;
+    background-color: #fff;
+    border: 1px solid var(--text_color);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.4;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     transition: border-color 0.3s;
     width: 100%;
-    @media(min-width: $md) {
-        font-size: 16px;
-    }
-    @media(min-width: $hd) {
-        font-size: 20px;
-    }
-    @media(min-width: $fhd) {
-        font-size: 28px;
-    }
 
     &::-webkit-input-placeholder {
         color: var(--secondary_color_dark);
@@ -99,17 +86,13 @@
 }
 
 .input {
-    height: 50px;
-    @media(min-width: $hd) {
-        height: 60px;
-    }
-    @media(min-width: $fhd) {
-        height: 80px;
-    }
+    height: 40px;
 }
 
 .textarea {
-    height: 200px;
+    height: 150px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     resize: none;
 }
 
@@ -127,7 +110,7 @@ textarea {
 .error-text {
     color: var(--error_color);
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: 5px;
     @media(min-width: $sm) {
         font-size: 14px;
     }

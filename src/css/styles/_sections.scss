@@ -8,6 +8,18 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
+
+    &--mod_2 {
+        @media(min-width: $md) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .sections-item {
+            @media(min-width: $hd) {
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 .sections-item {

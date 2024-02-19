@@ -1,0 +1,41 @@
+.popup {
+    background-color: #f1f2f4;
+    display: none;
+    max-width: 430px;
+    width: 100%;
+
+    &.fancybox-content {
+        padding: 25px;
+    }
+
+    &__closer {
+        @include button-reset;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        left: auto;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 40px;
+        z-index: 1;
+    }
+
+    &__title {
+        color: var(--text_color);
+        font-family: var(--secondary_font_family);
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

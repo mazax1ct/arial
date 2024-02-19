@@ -17,6 +17,9 @@
     <link rel="preload" href="fonts/subset-GothamPro.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/subset-GothamPro-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="plugins_css/slick.css" />
+    <link rel="stylesheet" href="plugins_css/slick-theme.css" />
+    <link rel="stylesheet" href="plugins_css/jquery.fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -391,17 +394,285 @@
             </section>
 
             <div class="container">
-                <div class="detail">
+                <section class="detail">
                     <div class="detail__text-block">
                         <h1>Паллетная выкладка</h1>
                         <p>от участника Международной Маркетинговой <br>Ассоциации в Ритейле POPAI</p>
                         <p><img src="images/content/detail/popai.png"></p>
-                        <p><a class="button" onclick="yaCounter47395144.reachGoal('Click_stoika_banner'); return true;">Узнать стоимость</a></p>
+                        <p><a class="button" onclick="yaCounter47395144.reachGoal('Click_stoika_banner'); return true;" href="javascript:void(0)" data-fancybox="price_request" data-src="#price_request">Узнать стоимость</a></p>
+
+                        <div id="price_request" class="popup">
+                            <button class="js-popup-closer popup__closer" type="button" title="Закрыть">
+                                <img title="Закрыть меню" src="images/icons/menu-close-icon.png">
+                            </button>
+                            <p class="popup__title">Узнать стоимость</p>
+                            <form class="form" action="">
+                                <div class="form-group">
+                                    <label class="form-label" for="u_name_">Ваше имя</label>
+                                    <input id="u_name_" class="input" type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="u_phone_">Телефон<span class="req">*</span></label>
+                                    <input id="u_phone_" class="js-phone-mask input" type="text" placeholder="+7(___)___ __ __">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="u_comment">Комментарий</label>
+                                    <textarea id="u_comment" class="textarea"></textarea>
+                                </div>
+
+                                <div class="form__button-block">
+                                    <button class="button" type="submit">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <div class="detail__image-block">
                         <img src="images/content/detail/img.jpg" alt="">
                     </div>
+                </section>
+
+                <div class="features">
+                    <div class="features__inner">
+                        <div class="features__item">
+                            <div class="feature">
+                                <div class="feature__image">
+                                    <img src="images/content/features/img_1.svg" alt="">
+                                </div>
+                                <div class="feature__text-block">
+                                    <p class="feature__title">СОБСТВЕННОЕ ПРОИЗВОДСТВО В СПБ</p>
+                                    <p class="feature__text">
+                                        уникальное оборудование с качеством печати 1200 dpi<br>
+                                        <a href="/equip">подробнее о производстве</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features__item">
+                            <div class="feature">
+                                <div class="feature__image">
+                                    <img src="images/content/features/img_2.svg" alt="">
+                                </div>
+                                <div class="feature__text-block">
+                                    <p class="feature__title">Тираж от 10 штук</p>
+                                    <p class="feature__text">
+                                        бесплатный пилотный образец при заключении договора
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features__item">
+                            <div class="feature">
+                                <div class="feature__image">
+                                    <img src="images/content/features/img_3.svg" alt="">
+                                </div>
+                                <div class="feature__text-block">
+                                    <p class="feature__title">Короткие сроки</p>
+                                    <p class="feature__text">
+                                        100 изделий за 3-7&nbsp;рабочих&nbsp;дней
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features__item">
+                            <div class="feature">
+                                <div class="feature__image">
+                                    <img src="images/content/features/img_4.svg" alt="">
+                                </div>
+                                <div class="feature__text-block">
+                                    <p class="feature__title">Собственный отдел разработки</p>
+                                    <p class="feature__text">
+                                        в штате 2 конструктора и 5&nbsp;дизайнеров
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
+
+                <section class="works">
+                    <div class="title-block">
+                        <h2>Наши работы</h2>
+                        <a href="#">всё портфолио</a>
+                    </div>
+                
+                    <div class="works__slider">
+                        <div class="js-works-slider">
+                            <div>
+                                <div class="slide-inner">
+                                    <img src="images/content/detail/img_2.jpg" alt="">
+                                    <p class="slide-title-descr">
+                                        Дисплей Coca-Cola Елка
+                                        <a onclick="yaCounter47395144.reachGoal('Zakazat_takoige'); return true;" href="javascript:void(0)" data-fancybox="price_request_1" data-src="#price_request">Заказать такой же</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="slide-inner">
+                                    <img src="images/content/detail/img_2.jpg" alt="">
+                                    <p class="slide-title-descr">
+                                        Дисплей Coca-Cola Елка
+                                        <a onclick="yaCounter47395144.reachGoal('Zakazat_takoige'); return true;" href="javascript:void(0)" data-fancybox="price_request_2" data-src="#price_request">Заказать такой же</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="slide-inner">
+                                    <img src="images/content/detail/img_2.jpg" alt="">
+                                    <p class="slide-title-descr">
+                                        Дисплей Coca-Cola Елка
+                                        <a onclick="yaCounter47395144.reachGoal('Zakazat_takoige'); return true;" href="javascript:void(0)" data-fancybox="price_request_3" data-src="#price_request">Заказать такой же</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__thumbs">
+                        <div class="js-works-thumbs">
+                            <div><img src="images/content/detail/img_2.jpg" alt=""></div>
+                            <div><img src="images/content/detail/img_2.jpg" alt=""></div>
+                            <div><img src="images/content/detail/img_2.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="detail-text">
+                    <div style="text-align:right;">
+                        <em>Ориентировочная стоимость за м2 в зависимости от объема заказа, руб</em>
+                    </div>
+                    <table class="prices-table">
+                        <thead>
+                            <tr>
+                                <td>Материал \ Тираж (м2)</td>
+                                <td>0-5</td>
+                                <td>5-20</td>
+                                <td>20-50</td>
+                                <td>50-200</td>
+                                <td>200-1000</td>
+                                <td>1000+</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Пенокартон белый 3 мм.</td>
+                                <td>call</td>
+                                <td>call</td>
+                                <td>call</td>
+                                <td>call</td>
+                                <td>call</td>
+                                <td>call</td>
+                            </tr>
+                            <tr>
+                                <td>Пенокартон 10мм</td>
+                                <td>call</td>
+                                <td>call</td>
+                                <td>call</td>
+                                <td>call</td>
+                                <td>call</td>
+                                <td>call</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align:right;">
+                        <span style="color:#d10000;"><em>Минимальный заказ - 1500-2000р.</em></span>
+                    </div>
+                    <p>
+                        Полноцветная печать на пенокартоне используется для изготовления интерьерных табличек, стендов, вывесок и POS-материалов, таких как: навигационные таблички в магазинах, ростовые фигуры, тантамарески, и элементы для промо-стоек.
+                    </p>
+                    <h2>Печать фото на пенокартоне</h2>
+                    <p>
+                        Прямая печать на пенокартоне сильно востребована у организаторов художественных галерей и оформителей интерьеров. С новейшим оборудованием компании DURST мы осуществляем фотопечать на пенокартоне в качестве 1200dpi максимальным размером
+                        2000*3000мм.
+                    </p>
+                    <p>
+                        В наличии имеются листы пенокартона толщиной 5мм и 10мм. Под заказ доступны листы толщиной 3мм.
+                    </p>
+                    <p>
+                        В большинстве случаев мы изготавливаем заказы на пенокартоне к вечеру следующего рабочего дня, то есть меньше чем за сутки. При этом объем заказа не особо играет роль из-за высокой скорости печати.
+                    </p>
+                    <p>
+                        Резка отпечатанных листов на изделия, в том числе и фигурная, осуществляется высокоточным оборудованием ZUND, рассчитывается отдельно в зависимости от сложности реза.
+                    </p>
+                
+                    <h3>Накатка на пенокартон</h3>
+                    <p>
+                        Всего пять лет назад популярной и чуть ли не единственной технологией изготовления фотокартин была накатка изображения, отпечатанного на самоклеющейся пленке, к основе из пенокартона. В настоящее время УФ-технологии печати позволяют
+                        переносить краску напрямую на материал, что значительно экономит как сами материалы, так и производственные ресурсы.
+                    </p>
+                    <p>
+                        Пожалуй, единственный случай, когда накатка на пенокартон остается актуальной - задача получить истинно глянцевое изображение. Если это Ваш случай, то рассчитайте заказ, написав запрос на почту: <a
+                          href="mailto:penokarton@arial.ru">penokarton@arial.ru</a>
+                    </p>
+                </div>
+
+                <section class="section">
+                    <div class="title-block">
+                        <h2>Также может заинтересовать</h2>
+                        <a href="#"> Все материалы</a>
+                    </div>
+                    <div class="sections sections--mod_2">
+                        <a class="sections-item" href="#" style="background-image:url('images/content/sections/img_1.png')">
+                            <img class="sections-item__image" src="images/content/sections/arial-icon.svg">
+                            <span class="sections-item__title">Рекламные стойки</span>
+                        </a>
+                        <a class="sections-item" href="#" style="background-image:url('images/content/sections/img_1.png')">
+                            <img class="sections-item__image" src="images/content/sections/arial-icon.svg">
+                            <span class="sections-item__title">Рекламные стойки</span>
+                        </a>
+                        <a class="sections-item" href="#" style="background-image:url('images/content/sections/img_1.png')">
+                            <img class="sections-item__image" src="images/content/sections/arial-icon.svg">
+                            <span class="sections-item__title">Рекламные стойки</span>
+                        </a>
+                        <a class="sections-item" href="#" style="background-image:url('images/content/sections/img_1.png')">
+                            <img class="sections-item__image" src="images/content/sections/arial-icon.svg">
+                            <span class="sections-item__title">Рекламные стойки</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="callback">
+                    <div class="callback__inner">
+                        <h2>Остались вопросы?</h2>
+                        <p>Наши менеджеры с удовольствием Вас проконсультируют</p>
+                        <form class="callback__form form" action="">
+                            <div class="form-group">
+                                <label class="form-label" for="u_name">Ваше имя</label>
+                                <input id="u_name" class="input" type="text">
+                            </div>
+                
+                            <div class="form-group">
+                                <label class="form-label" for="u_phone">Телефон<span class="req">*</span></label>
+                                <input id="u_phone" class="js-phone-mask input" type="text" placeholder="+7(___)___ __ __">
+                                <div class="error-text">Ошибка заполнения поля!</div>
+                            </div>
+                
+                            <div class="form__button-block">
+                                <button class="button" type="submit">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="section clients">
+                    <h2>Наши клиенты</h2>
+                    <div class="js-clients">
+                        <div><img src="images/content/clients/ec7389e06c40518396c0a08bbea0307f.jpg"></div>
+                        <div><img src="images/content/clients/169bd7ae7767c8baa3bbe33356807a1a.jpg"></div>
+                        <div><img src="images/content/clients/7d2489ae01e58e6177c308b6b157b693.jpg"></div>
+                        <div><img src="images/content/clients/f5e70897cad01c5a36a38ff0522a8767.jpg"></div>
+                        <div><img src="images/content/clients/c67182890a04017aff3448cb340759f5.jpg"></div>
+                        <div><img src="images/content/clients/7fb0b884543bad71b546696f66a5a029.jpg"></div>
+                        <div><img src="images/content/clients/23aa9cc868731605eb03968c37529cab.jpg"></div>
+                        <div><img src="images/content/clients/effabeac6cb64203b55e5ee6ea4de185.jpg"></div>
+                        <div><img src="images/content/clients/6ce3986bb04c926d629cada4d7fe0c65.jpg"></div>
+                        <div><img src="images/content/clients/050ef165208f0e2ce193652d78c6815b.jpg"></div>
+                        <div><img src="images/content/clients/705898afc151197bd0c6688dd6792f90.jpg"></div>
+                        <div><img src="images/content/clients/553ee4f45bf450a590db6dd8e1a114ae.jpg"></div>
+                    </div>
+                </section>
+
             </div>
         </main>
     </div>
@@ -465,6 +736,10 @@
     </footer>
 
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/inputmask-init.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

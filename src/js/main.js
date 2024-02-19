@@ -1,5 +1,50 @@
-$(document).ready(function() {
+//переопределение дефолтных настроек fancybox
+$.fancybox.defaults.hash = false;
+$.fancybox.defaults.smallBtn = false;
+$.fancybox.defaults.toolbar = false;
+$.fancybox.defaults.touch = false;
 
+$(document).ready(function() {
+  if($('.js-works-slider').length) {
+    $('.js-works-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      asNavFor: '.js-works-thumbs',
+      prevArrow: '<button class="slick-arrow slick-prev" aria-label="Назад" type="button"><svg aria-hidden="true"><use xlink:href="images/sprite.svg#arrow_right"/></svg></button>',
+      nextArrow: '<button class="slick-arrow slick-next" aria-label="Вперед" type="button"><svg aria-hidden="true"><use xlink:href="images/sprite.svg#arrow_right"/></svg></button>',
+    });
+  }
+
+  if($('.js-works-thumbs').length){
+    $('.js-works-thumbs').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      asNavFor: '.js-works-slider',
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true
+    });
+  }
+
+  if($('.js-clients').length) {
+    $('.js-clients').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 5,
+          }
+        }
+      ]
+    });
+  }
 });
 
 //открытие мобильного меню меню

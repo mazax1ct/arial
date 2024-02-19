@@ -187,3 +187,40 @@ hr {
 .text-right {
     text-align: right;
 }
+
+.section {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+.title-block {
+    align-items: center;
+    display: flex;
+    gap: var(--container_padding);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    h2 {
+        color: var(--text_color);
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: var(--primary_color);
+        font-family: var(--secondary_font_family);
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include hover {
+            color: var(--primary_color);
+            text-decoration: underline;
+        }
+    }
+}
+
+.req {
+    color:: var(--error_color);
+}
