@@ -1,18 +1,27 @@
 .nav-block {
-    --gap: 40px;
+    --gap: 20px;
     background-color: #dfe4ea;
     min-height: 70px;
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
-    z-index: 1;
+    z-index: 3;
 
     &__inner {
+        padding-left: var(--container_padding);
+        padding-right: var(--container_padding);
         @media(min-width: $sm) {
             align-items: center;
             display: flex;
             flex-direction: row-reverse;
             gap: var(--gap);
+        }
+        @media(min-width: $hd) {
+            margin-left: calc(22.66666667% - var(--container_padding));
+            margin-right: calc(22.66666667% - var(--container_padding));
+        }
+        @media(min-width: $lg) {
+            --gap: 40px;
         }
     }
 }
@@ -47,6 +56,10 @@
         @include hover {
             color: var(--primary_color);
         }
+        @media(min-width: $hd) and (max-width: $lg - 0.01px) {
+            font-size: 14px;
+            padding-left: 16px;
+        }
 
         &.is-active {
             svg {
@@ -63,7 +76,7 @@
 
     &__container {
         background-color: rgba(#313236, 0.8);
-        height: calc(100dvh - 40px - 138px);
+        min-height: calc(100dvh - 40px - 138px);
         display: none;
         left: 0;
         position: absolute;
@@ -71,7 +84,7 @@
         top: 100%;
         z-index: 10;
         @media(min-width: $sm) {
-            height: calc(100dvh - 67px - 70px);
+            min-height: calc(100dvh - 67px - 70px);
         }
     }
 
@@ -86,6 +99,7 @@
     }
 
     &__lvl-block {
+        @include list-reset;
         @media(min-width: $hd) {
             width: calc(100% / 3);
         }
@@ -138,26 +152,33 @@
     &__lvl-2 {
         @media(min-width: $hd) {
             border-left: 3px solid var(--primary_color);
+            position: relative;
+            z-index: 1;
         }
     }
 
     &__lvl-3 {
         @media(min-width: $hd) {
             border-left: 3px solid #dfe4ea;
+            left: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
         }
     }
 
     &__item {
-        position: relative;
-        z-index: 1;
-
         &:not(:last-child) {
             margin-bottom: 5px;
         }
 
         &.is-active {
-            @media(max-width: $hd - 0.01px) {
-                padding-left: 48px;
+            .menu__item-inner {
+                @media(max-width: $hd - 0.01px) {
+                    padding-left: 48px;
+                }
             }
 
             .menu__link {
@@ -178,6 +199,12 @@
                 }
             }
         }
+    }
+
+    &__item-inner {
+        display: block;
+        position: relative;
+        z-index: 1;
     }
 
     &__link {
