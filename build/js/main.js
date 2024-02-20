@@ -125,3 +125,9 @@ if($('body').width() > 1199) {
     }
   });
 }
+
+//закрытие fancybox
+$(document).on('click', '.js-popup-closer', function () {
+  $.fancybox.close();
+  return false;
+});
