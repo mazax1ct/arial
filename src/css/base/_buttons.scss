@@ -15,7 +15,7 @@
     padding-right: 20px;
     text-decoration: none;
     text-transform: uppercase;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     user-select: none;
     white-space: nowrap;
 
@@ -33,6 +33,22 @@
         @include hover {
             background-color: var(--text_color);
             color: var(--primary_color);
+        }
+    }
+
+    &--mod_1 {
+        border: 2px solid var(--primary_color);
+        background-color: #fff;
+        color: var(--text_color);
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--text_color);
+                border-color: var(--text_color);
+                color: var(--primary_color);
+            }
         }
     }
 }

@@ -1,7 +1,11 @@
 .clients {
     h2 {
         color: var(--text_color);
-        margin: 0 0 20px;
+        font-family: var(--secondary_font_family);
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 30px;
         text-align: center;
         text-transform: uppercase;
     }

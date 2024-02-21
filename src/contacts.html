@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>ARIAL</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="page">
+    <div class="page__content">
+
+        //= template/header.html
+
+        <main>
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">Контакты</li>
+                    </ul>
+                </div>
+            </div>
+
+            //= template/menu.html
+
+            <div class="container">
+                <h1>«Ариал» – Контакты. Схема проезда</h1>
+
+                <div class="contacts">
+                    <div class="contacts__nav">
+                        <div class="contacts__nav-block">
+                            <button class="js-contacts contacts__nav-button is-active" type="button" data-target="1">АРИАЛ НА КАРТЕ</button>
+                        </div>
+                        <div class="contacts__nav-block">
+                            <button class="js-contacts contacts__nav-button" type="button" data-target="2">СХЕМА ПРОЕЗДА</button>
+                        </div>
+                    </div>
+
+                    <div class="contacts__content">
+                        <div class="contacts__tabs">
+                            <div class="contacts__tab is-active" data-target="1">
+                                <iframe src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;source=constructor-api&amp;um=constructor%3Aa32236a453e5ac237a992e0bdf9737701913c80c9deccf9dde527feb6a4c7ab8" frameborder="0"
+                                  allowfullscreen="true" width="100%" style="display: block;"></iframe>
+                            </div>
+                            <div class="contacts__tab" data-target="2">
+                                <img src="images/content/contacts/map.png" alt="">
+                            </div>
+                        </div>
+                        <div class="contacts__info">
+                            <div class="contacts__info-inner">
+                                <div class="contacts__info-block">
+                                    <img src="images/icons/c-i-1.png">
+                                    санкт-петербург<br> 3-й Бадаевский<br> проезд 10
+                                </div>
+                                <div class="contacts__info-block">
+                                    <img src="images/icons/c-i-2.png">
+                                    <a href="tel:+78123132332">+7 (812) 313-23-32</a><br>
+                                    <a href="tel:+78123132332" style="letter-spacing: -0.8px">+7 (499) 077 00 00</a>
+                                </div>
+                                <div class="contacts__info-block">
+                                    <img src="images/icons/c-i-3.png">
+                                    пн-пт: 10:00 - 19:00<br>
+                                    сб-вс: выходной
+                                </div>
+                                <div class="contacts__info-block">
+                                    <p>выдача<br> продукции</p>
+                                    пн-вс: 10:00 - 22:00
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    //= template/footer.html
+
+    //= template/scripts.html
+</body>
+
+</html>
