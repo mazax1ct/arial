@@ -112,13 +112,21 @@ $(document).on('click', '.js-menu-toggler', function() {
 
 //основное меню на мобилах
 $(document).on('click', '.js-menu-button', function () {
-  if(!$(this).hasClass('is-active')){
+  if(!$(this).hasClass('is-active')) {
     $('.menu__lvl-block').hide();
     $(this).closest('.menu__lvl-block').show();
     $(this).closest('.menu__lvl-block').find('.menu__item').hide();
+
+    if($(this).closest('.menu__lvl-block').hasClass('menu__lvl-1')){
+      $(this).closest('.menu__lvl-block').find('.menu__lvl-2').find('.menu__item').show();
+    }
+
     if($(this).closest('.menu__lvl-block').hasClass('menu__lvl-2')){
+      $('.menu__lvl-1').show();
+      $('.menu__lvl-1 > .menu__item.is-active > .menu__item-inner').hide();
       $(this).closest('.menu__lvl-block').find('.menu__lvl-3').find('.menu__item').show();
     }
+
     $(this).closest('.menu__item').show().addClass('is-active');
     $('ul[data-target='+ $(this).attr('data-target') +']').show();
     $(this).addClass('is-active');
@@ -129,6 +137,7 @@ $(document).on('click', '.js-menu-button', function () {
 
     if($(this).closest('.menu__lvl-block').hasClass('menu__lvl-2')){
       $('.menu__lvl-1').show();
+      $('.menu__lvl-1 .menu__item-inner').show();
     }
 
     $(this).removeClass('is-active');
@@ -138,7 +147,7 @@ $(document).on('click', '.js-menu-button', function () {
 });
 
 //основное меню на десктопах
-if($('body').width() > 1199) {
+/*if($('body').width() > 1199) {
   $(document).on('mouseover', '.menu__item', function() {
     var link = $(this).find('.menu__button').attr('data-target');
     if($(this).closest('.menu__lvl-block').hasClass('menu__lvl-1')) {
@@ -154,7 +163,7 @@ if($('body').width() > 1199) {
       $('.menu__lvl-3[data-target="'+link+'"]').show();
     }
   });
-}
+}*/
 
 //закрытие fancybox
 $(document).on('click', '.js-popup-closer', function () {
